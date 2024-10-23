@@ -9,16 +9,16 @@ import SideMenu from './Sidemenu';
 
 
 const networks = {
-    LineaTestnet: {
-    chainId: `0x${Number(59141).toString(16)}`,
-    chainName: "LineaTestnet",
+  AIATestnet: {
+    chainId: `0x${Number(1320).toString(16)}`,
+    chainName: "AIATestnet",
     nativeCurrency: {
-      name: "LineaTestnet",
-      symbol: "ETH",
+      name: "AIATestnet",
+      symbol: "AIA",
       decimals: 18,
     },
-    rpcUrls: ["https://rpc.sepolia.linea.build"],
-    blockExplorerUrls: ['https://sepolia.lineascan.build/'],
+    rpcUrls: ["https://aia-dataseed1-testnet.aiachain.org"],
+    blockExplorerUrls: ['https://testnet.aiascan.com/'],
 
   },
 };
@@ -47,7 +47,7 @@ function Nav() {
     
     const balanceWei= await web3.eth.getBalance(accountAddress)
             
-    const finalbalance = web3.utils.fromWei(balanceWei,"ether")+ " "+networks["LineaTestnet"]["nativeCurrency"]["name"];
+    const finalbalance = web3.utils.fromWei(balanceWei,"ether")+ " "+networks["AIATestnet"]["nativeCurrency"]["name"];
     console.log("result->"+finalbalance);
     setBalance(finalbalance);
     
@@ -67,7 +67,7 @@ function Nav() {
   // console.log( "The netwopr is",await web3.network)
   const chainId = await web3.eth.getChainId();
 
-  const LineaTestnetChainId = parseInt(networks.LineaTestnet.chainId, 16);
+  const AIATestnetChainId = parseInt(networks.AIATestnet.chainId, 16);
 
 
   console.log(parseInt(chainId));
@@ -77,12 +77,12 @@ function Nav() {
 
   
  
-  if(chainId1 !== LineaTestnetChainId){
+  if(chainId1 !== AIATestnetChainId){
 
       await window.ethereum.request({
           method:"wallet_addEthereumChain",
           params:[{
-              ...networks["LineaTestnet"]
+              ...networks["AIATestnet"]
           }]
       })
   }
@@ -131,7 +131,7 @@ function Nav() {
   href="/"
 >
   
-  <div className=" mmh text-lg mx-3">Linea Club</div>
+  <div className=" mmh text-lg mx-3">AIA Club</div>
 </a>
 </div>
   <button

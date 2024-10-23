@@ -12,7 +12,7 @@ import lighthouse from '@lighthouse-web3/sdk'
 import axios from 'axios';
 import { notification } from 'antd';
 import GetClub from "../getclub";
-const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.sepolia.linea.build"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://aia-dataseed1-testnet.aiachain.org"));
 const apiKey = "207e0c12.0ca654f5c03a4be18a3185ea63c31f81"
 var contractPublic = null;
 var cid = null;
@@ -184,7 +184,7 @@ function CreateProposal() {
                     message: 'Transaction Successful',
                     description: (
                       <div>
-                        Transaction Hash: <a href={`https://sepolia.lineascan.build/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                        Transaction Hash: <a href={`https://testnet.aiascan.com/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                       </div>
                     )
                   });
@@ -292,7 +292,7 @@ function CreateProposal() {
         <div className="sidebar-brand-icon rotate-n-15">
           <i className="fas fa-laugh-wink" />
         </div>
-        <div className="sidebar-brand-text mx-3">Linea Club</div>
+        <div className="sidebar-brand-text mx-3">AIA Club</div>
       </a>
       {/* Divider */}
       <hr className="sidebar-divider my-0" />
@@ -345,7 +345,7 @@ function CreateProposal() {
                   <div className="row no-gutters align-items-center">
                     <div className="col mr-2">
                       <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                        Club Balance (ETH)
+                        Club Balance (AIA)
                       </div>
                       <div className="h5 mb-0 font-weight-bold text-gray-800 club_balance">
                         -
@@ -443,7 +443,7 @@ onChange={(e) => setDestination(e.target.value)}
                         placeholder="Enter the sepolia destination address: 0x....."
                       />{" "}
                       <br />
-                      Amount (in ETH):{" "}
+                      Amount (in AIA):{" "}
                       <input
                         type="number"
                         id="proposal_amount"

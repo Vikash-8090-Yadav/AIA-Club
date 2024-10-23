@@ -9,7 +9,7 @@ import {Web3} from 'web3';
 import ABI from "./SmartContract/artifacts/contracts/InvestmentClub.sol/InvestmentClub.json"
 
 
-const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.sepolia.linea.build"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://aia-dataseed1-testnet.aiachain.org"));
 var contractPublic = null;
 
 var pieceCID = null;
@@ -56,7 +56,7 @@ var clubId = localStorage.getItem("clubId");
       $('#votes_against').text(clubs.votesAgainst);
       $('#CID').text(clubs.Cid);
    
-      var comp = clubs.creator.toLowerCase()
+      var comp = clubs.creator
       if(clubs.status == 'Pending' && comp == filWalletAddress) {
 
         $('.creator_options').css('display','block');

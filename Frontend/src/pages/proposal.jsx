@@ -22,7 +22,7 @@ const ethers = require("ethers")
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 const DataDaoAddress  = "0x8138489b863a68f224307a5D0Fa630917d848e25"
-const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.sepolia.linea.build"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://aia-dataseed1-testnet.aiachain.org"));
 
 var contractPublic = null;
 
@@ -108,7 +108,7 @@ async function runProposal(event) {
                   message: 'Transaction Successful',
                   description: (
                     <div>
-                      Transaction Hash: <a href={`https://sepolia.lineascan.build/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                      Transaction Hash: <a href={`https://testnet.aiascan.com/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                     </div>
                   )
                 });
@@ -158,7 +158,7 @@ async function runProposal(event) {
               message: 'Transaction Successful',
               description: (
                 <div>
-                  Transaction Hash: <a href={`https://sepolia.lineascan.build/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                  Transaction Hash: <a href={`https://testnet.aiascan.com/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                 </div>
               )
             });
@@ -299,7 +299,7 @@ async function voteOnProposal() {
                 message: 'Transaction Successful',
                 description: (
                   <div>
-                    Transaction Hash: <a href={`https://sepolia.lineascan.build/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                    Transaction Hash: <a href={`https://testnet.aiascan.com/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                   </div>
                 )
               });
@@ -386,7 +386,7 @@ function Proposal() {
         <div className="sidebar-brand-icon rotate-n-15">
           <i className="fas fa-laugh-wink" />
         </div>
-        <div className="sidebar-brand-text mx-3">Linea Club</div>
+        <div className="sidebar-brand-text mx-3">AIA Club</div>
       </a>
       {/* Divider */}
       <hr className="sidebar-divider my-0" />
@@ -442,7 +442,7 @@ function Proposal() {
                   <div className="row no-gutters align-items-center">
                     <div className="col mr-2">
                       <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                        Club Balance (ETH)
+                        Club Balance (AIA)
                       </div>
                       <div className="h5 mb-0 font-weight-bold text-gray-800 club_balance">
                         -
@@ -553,7 +553,7 @@ function Proposal() {
                         <span id="proposal_destination" />
                       </b>{" "}
                       <br />
-                      Amount (in ETH):{" "}
+                      Amount (in AIA):{" "}
                       <b>
                         <span id="proposal_amount" />
                       </b>{" "}

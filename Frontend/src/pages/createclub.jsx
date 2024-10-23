@@ -13,7 +13,7 @@ import {Web3} from 'web3';
 import $ from 'jquery'; 
 import ABI from "../SmartContract/artifacts/contracts/InvestmentClub.sol/InvestmentClub.json"
 const ethers = require("ethers")
-const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.sepolia.linea.build"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://aia-dataseed1-testnet.aiachain.org"));
 
 
 
@@ -194,7 +194,7 @@ function CreateClub() {
                 message: 'Transaction Successful',
                 description: (
                   <div>
-                   Transaction Hash: <a href={`https://sepolia.lineascan.build/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+                   Transaction Hash: <a href={`https://testnet.aiascan.com/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
                   </div>
                 )
               });
@@ -263,7 +263,7 @@ function CreateClub() {
         <div className="sidebar-brand-icon rotate-n-15">
           <i className="fas fa-laugh-wink" />
         </div>
-        <div className="sidebar-brand-text mx-3">Linea Club</div>
+        <div className="sidebar-brand-text mx-3">AIA Club</div>
       </a>
       {/* Divider */}
       <hr className="sidebar-divider my-0" />
@@ -319,7 +319,7 @@ function CreateClub() {
                   <div className="row no-gutters align-items-center">
                     <div className="col mr-2">
                       <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                        Balance (ETH)
+                        Balance (AIA)
                       </div>
                       <div className="h5 mb-0 font-weight-bold text-gray-800 view_balance_address">
                         -

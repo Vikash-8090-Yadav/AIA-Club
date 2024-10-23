@@ -10,14 +10,14 @@ task("accounts","Prints the list of the accounts",async (taskArgs , hre )=>{
 })
 
 module.exports = {
-  solidity: "0.8.10",
+  solidity: "0.8.19",
 
-  defaultNetwork: "LineaTestnet",
+  defaultNetwork: "AIATestnet",
   networks:{
     hardhat:{},
-    LineaTestnet: {
-      url: "https://rpc.sepolia.linea.build",
-      chainId: 59141,
+    AIATestnet: {
+      url: "https://aia-dataseed1-testnet.aiachain.org",
+      chainId: 1320,
       accounts: ['5753e65f56865a161fbf41932a0d855139a4ce9dc20d82fb655bff393fc41702'],
     },
   }
